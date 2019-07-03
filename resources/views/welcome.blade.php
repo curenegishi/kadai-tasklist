@@ -3,8 +3,8 @@
 @section('content')
 
     @if (Auth::check())
-    <div class="center jumbotron">
-        Logged in. Your name is {{ Auth::user()->name }}
+    @include('tasks.index',['tasks'=> $tasks])
+        
     @else
     <div class="center jumbotron">
         <div class="text-center">
